@@ -1,18 +1,19 @@
-
 body {
     width: 100%;
     height: 100%;
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    background-position: center;
     background-color: rgb(243, 241, 231);
 }
 
-h2 img{
+img {
     margin: 0 auto 2em;
     height: 150px;
     width: 300px;
 }
 
-
-.gallery-container{
+.gallery-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -20,20 +21,20 @@ h2 img{
     margin: 0 auto;
 }
 
-.gallery-container img:hover{
+.gallery-container img:hover {
     opacity: 0.8;
     transform: scale(1.05);
 }
 
-.bg-delete, .bg-upload, .bg-success, .bg-error{
+.bg-delete, .bg-upload, .bg-success, .bg-error {
     padding: .5em;
     text-align: center;
     border-radius: 5px;
     font-weight: 700;
 }
 
-.bg-upload{
-    background: rgb(71, 112, 189);
+.bg-upload {
+    background: rgb(13, 30, 78);
     color: white;
     width: 150px;
     transition: all 0.5s;
@@ -47,9 +48,9 @@ h2 img{
     display: inline-block;
     position: relative;
     transition: 0.5s;
-  }
-  
-  .bg-upload span:after {
+}
+
+.bg-upload span:after {
     font-family: "Font Awesome 5 Free";
     content: '\f0aa';
     position: absolute;
@@ -58,32 +59,33 @@ h2 img{
     right: -20px;
     transition: 0.5s;
     color: white;
-  }
-  
-  .bg-upload:hover span {
+}
+
+.bg-upload:hover span {
     padding-right: 25px;
     color: white;
-  }
-  
-  .bg-upload:hover span:after {
+}
+
+.bg-upload:hover span:after {
     opacity: 1;
     right: 0;
-  }
+}
 
-.bg-success{
+.bg-success {
     background-color: rgb(14, 184, 14);
     color: white;
     width: 100%;
 }
 
-.bg-error{
+.bg-error {
     background-color: #a81602;
     color: white;
     width: 100%;
 }
+
 .bg-delete {
     border-radius: 4px;
-    background-color: #361e1a;
+    background-color: rgb(66, 74, 92);
     color: #FFFFFF;
     width: 230px;
     transition: all 0.5s;
@@ -92,17 +94,16 @@ h2 img{
     font-weight: 700;
     position: absolute;
     margin-left: .6em;
-  }
-  
-  .bg-delete span {
+}
+
+.bg-delete span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
-  }
+}
 
-  
-  .bg-delete span:after {
+.bg-delete span:after {
     font-family: "Font Awesome 5 Free";
     content: '\f2ed';
     position: absolute;
@@ -111,24 +112,23 @@ h2 img{
     right: -20px;
     transition: 0.5s;
     color: white;
-  }
-  
-  .bg-delete:hover span {
+}
+
+.bg-delete:hover span {
     padding-right: 25px;
     color: white;
-  }
-  
-  .bg-delete:hover span:after {
+}
+
+.bg-delete:hover span:after {
     opacity: 1;
     right: 0;
-  }
-.gallery-container{
+}
+
+.gallery-container {
     margin-bottom: 5em;
 }
+
 .gallery-container img {
-    /* background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
     background: #ffffff;
     border: 1px solid #c2bdbd;
     padding: 15px 15px 60px 15px;
@@ -138,48 +138,10 @@ h2 img{
     margin: 3em 10px 1em;
     text-decoration: none;
     position: relative;
-    box-shadow: inset 1px 1px 10px rgba(0,0,0,0.1);
+    box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.1);
     -webkit-clip-path: polygon(10% 0, 0 10%, 0% 100%, 90% 100%, 100% 90%, 100% 0%);
     transition: transform .2s;
 }
-
-/* .block a{
-    position: absolute;
-    width: 230px;
-    margin-left: .6em;
-    font-weight: 700;
-    color: rgb(85, 83, 76);
-    padding: .5em .75em;;
-    background: rgb(182, 164, 82);
-    text-decoration: none;
-    border-radius: 10px;
-    text-align: center;
-} */
-
-/* .gallery-container a h3, a p{
-    font-family: Catamaran;
-    font-size: 20px;
-    font-weight: 700;
-    color: #111;
-    text-align: center;
-}
-
-.gallery-links h2{
-    font-family: Catamaran;
-    font-size: 28px;
-    font-weight: 600;
-    color: #111;
-    text-transform: uppercase;
-}
-
-.gallery-upload form{
-    margin: 3em auto 0;
-    padding: 2em;
-    justify-content: center;
-    width: 600px;
-    border-radius: 10px;
-    background-color: rgb(113, 116, 141);
-} */
 
 .container {
     padding: 50px 10%;
@@ -188,17 +150,17 @@ h2 img{
 
 .box {
     position: relative;
-    background: #ffffff;
+    /* background: #ffffff; */
     width: 100%;
 }
 
 .box-header {
     color: #444;
     display: block;
-    background-color: rgb(243, 241, 231);
+    /* background-color: rgb(243, 241, 231); */
     padding: 10px;
     position: relative;
-    border-bottom: 1px solid #f4f4f4;
+    /* border-bottom: 1px solid #f4f4f4; */
     margin-bottom: 10px;
     border-radius: 10px;
 }
@@ -210,7 +172,7 @@ h2 img{
 }
 
 .dropzone-wrapper {
-    border: 5px double #91b0b3;
+    border: 5px double rgb(66, 74, 92);
     color: #92b0b3;
     position: relative;
     height: 100px;
@@ -239,6 +201,7 @@ h2 img{
 
 .dropzone-wrapper:hover, .dropzone-wrapper.dragover {
     background: #ecf0f5;
+    opacity: .5;
 }
 
 .preview-zone {
@@ -249,5 +212,157 @@ h2 img{
     box-shadow: none;
     border-radius: 10px;
     margin-bottom: 0;
-    background: rgb(243, 241, 231);
+    /* background: rgb(243, 241, 231); */
+}
+
+#logout, #content {
+    /* set initial display to none */
+    display: none;
+}
+
+#login {
+    display: inline block;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    position: absolute;
+    right: 6em;
+    top: 1.5em;
+}
+
+#logout, #register {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    position: absolute;
+    right: 1.5em;
+    top: 1.5em;
+}
+
+#showPassword {
+    text-decoration: underline;
+}
+
+#showPassword:hover {
+    cursor: pointer;
+}
+
+.form, .form-register {
+    background: rgb(255, 255, 255, .5);
+    width: 500px;
+    padding: 2em;
+    border: 5px solid rgb(66, 74, 92);
+    border-radius: 10px;
+}
+
+.form {
+    margin: 2em auto;
+}
+
+.form-register {
+    margin: 2em auto 10vh;
+}
+
+.form input, .form-register input, .form label, .form-register label, .form span, .form-register span {
+    position: relative;
+    left: 25%;
+    font-weight: 700;
+    color: rgb(63, 58, 58);
+    border-radius: 5px;
+    margin-bottom: -2em;
+}
+
+.form h2, .form-register h2 {
+    margin: 0 auto;
+    position: relative;
+    left: 15%;
+}
+
+.site-nav {
+    background: rgb(66, 74, 92);
+    width: 100%;
+    height: 75px;
+    margin-bottom: 10vh;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 200px 450px 1fr 1fr 50px;
+    grid-template-areas: "brand . faux . log";
+    border-bottom: 3px solid rgb(14, 14, 104, .2);
+}
+
+.faux-nav {
+    grid-area: faux;
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.faux-nav a {
+    color: white;
+    font-weight: 700;
+    margin-top: 1.5em;
+}
+
+.branding {
+    grid-area: brand;
+    margin-left: 1em;
+    color: white;
+    line-height: 0;
+}
+
+.branding img {
+    width: 175px;
+    height: 75px;
+}
+
+.branding p {
+    font-weight: 500;
+    margin-left: .75em;
+}
+
+.log {
+    grid-area: log;
+}
+
+.button {
+    margin-left: .75em;
+    background-color: rgb(66, 74, 92);
+    color: white !important;
+}
+
+.register{
+    margin: 0;
+
+}
+
+span p {
+    display: inline;
+    margin-left: 1em;
+}
+
+.errorBucket {
+    background: maroon;
+    color: white;
+    padding: 1em;
+    width: 500px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.welcome {
+    position: absolute;
+    right: 1.5em;
+    top: 3em;
+    font-size: 1em;
+    color: rgb(113, 203, 219);
+}
+
+span a {
+    color: rgb(18, 155, 47);
+    font-size: 1.3em;
+}
+
+span a:hover {
+    color: green;
+    text-decoration: none;
 }

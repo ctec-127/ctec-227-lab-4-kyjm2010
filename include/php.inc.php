@@ -1,24 +1,12 @@
 <?php 
 
-function display_images(){
-    $dir="uploads";
-    if (is_dir($dir)) {
-        if ($dir_handle = opendir($dir)) {
-            while($filename = readdir($dir_handle)){
-                if (!is_dir($filename)) {
-                    echo "<div class=\"block\"><img src=\"uploads/$filename\" alt=\"A photo\"><br><a href=\"simple-gallery.php?file=$filename\" class=\"bg-delete\"><span>Delete Photo</span></a></div>";
-                }
-            }
-            closedir($dir_handle);
-        }
-    }
-}
+
 
 if(isset($_GET['file'])) {
-    copy('uploads/' . $_GET['file'], 'stored/' . $_GET['file']);
+    copy($_SESSION['username'] . "/" . $_GET['file'], 'stored/' . $_GET['file']);
 
-    if (unlink("uploads/" . $_GET['file'])) {
-        header("Location: simple-gallery.php");
+    if (unlink($_SESSION['username'] . "/" . $_GET['file'])) {
+        header("Location: gallery.php");
         $message = "<p class=\"bg-upload\">That file could not be deleted.</p>";
     } else {
         $message = '<p class=\"bg-error\">That file could not be deleted.</p>';
@@ -38,7 +26,7 @@ if(isset($_GET['file'])) {
 
         $tmp_file = $_FILES['file_upload']['tmp_name'];
         $target_file = basename($_FILES['file_upload']['name']);
-        $upload_dir = 'uploads';
+        $upload_dir = $_SESSION['username'];
 
         if (move_uploaded_file($tmp_file, $upload_dir . "/" . $target_file)) {
             $message = "<p class=\"bg-success\">File Uploaded!</p>";
@@ -47,6 +35,8 @@ if(isset($_GET['file'])) {
             $message = "<p class=\"bg-error\">$upload_errors[$error]</p>";
         }
     }
+
+
     
    
 ?>

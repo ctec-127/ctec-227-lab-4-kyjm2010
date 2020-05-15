@@ -1,19 +1,15 @@
-<?php 
-    require_once 'include/php.inc.php';
+<?php
+// home.php
+session_start();
+$pageTitle = 'Home';
+require 'include/header.inc.php';
+require_once 'include/php.inc.php';
+require_once 'include/functions.inc.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arts and Inspirations Image Gallery</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/738255dfdd.js" crossorigin="anonymous"></script>
 
-<body>
-    <div class="container-fluid">
+<h1 class='welcome'><?= isset($_SESSION['first_name']) ? 'Welcome Back '.$_SESSION['first_name'] : ''?></h1>
+<div id="message"></div>
+<div class="container-fluid" id="content">
         <form action="<?= $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
             <div class="container">
                 <div class="row">
@@ -21,7 +17,7 @@
                         <div class="form-group">
                             <div class="preview-zone hidden">
                                 <div class="box box-solid">
-                                    <h2><img src="images/art.png" alt=""></h2>
+                                    <!-- <h2><img src="images/art.png" alt=""></h2> -->
                                     <div class="box-header with-border">
                                     <div><b>Images Previewed Here</b></div>
                                 </div>
@@ -29,11 +25,13 @@
                             </div>
                         </div>
                         <div>
-                    <?php
-                    if (!empty($message)) {
-                        echo "<p id=\"alert\" class=\"mt-4\">{$message}</p>";
-                    }
-                    ?>
+                        <div id="alert">
+                            <?php
+                                if (!empty($message)) {
+                                    echo "<p class=\"mt-4\">{$message}</p>";
+                                }
+                            ?>
+                        </div>
                     </div> 
                         <div class="dropzone-wrapper">
                             <div class="dropzone-desc">
@@ -59,7 +57,7 @@
             ?>
         </div>
     </div>
+<!-- <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+<script defer src="js/script.js"></script>
 
-    <script src="script.js"></script>
-</body>
-</html>
+<?php require 'include/footer.inc.php' ?>
