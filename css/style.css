@@ -34,7 +34,7 @@ img {
 }
 
 .bg-upload {
-    background: rgb(13, 30, 78);
+    background: rgb(13, 30, 78, .8);
     color: white;
     width: 150px;
     transition: all 0.5s;
@@ -301,7 +301,58 @@ img {
     color: white;
     font-weight: 700;
     margin-top: 1.5em;
+    transition: all 0.5s;
+    cursor: pointer;
 }
+/* .bg-upload {
+    background: rgb(13, 30, 78);
+    color: white;
+    width: 150px;
+    justify-self: center;
+    font-weight: 700;
+} */
+
+.faux-nav a span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.faux-nav a span:after {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+    color: white;
+}
+
+.faux-nav a:hover span {
+    padding-right: 25px;
+    color: white;
+}
+
+.faux-nav a:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.search span:after{
+    font-family: "Font Awesome 5 Free";
+    content: '\f002';
+}
+
+.support span:after{
+    font-family: "Font Awesome 5 Free";
+    content: '\f059';
+}
+
+.settings span:after{
+    font-family: "Font Awesome 5 Free";
+    content: '\f013';
+}
+
 
 .branding {
     grid-area: brand;
@@ -329,6 +380,7 @@ img {
     background-color: rgb(66, 74, 92);
     color: white !important;
 }
+
 
 .register{
     margin: 0;
@@ -365,4 +417,11 @@ span a {
 span a:hover {
     color: green;
     text-decoration: none;
+}
+
+footer{
+    width: 200px;
+    margin: 10em auto 0;
+    font-weight: 700;
+    color: rgb(66, 74, 92);
 }

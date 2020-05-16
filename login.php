@@ -36,21 +36,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
             header('location: gallery.php');
         } else {
-            $message = "<p class=\"bg-error\">Invalid Username/Password</p>";
+            $message = "<p class=\"errorBucket text-center\">Invalid Username/Password</p>";
         }
         
     } else{
-        $message = display_error_bucket($errorBucket);
+        display_error_bucket($errorBucket);
     }
-}
+} 
+?>
+<?php
+    if (!empty($message)) {
+        echo "<p class=\"mt-4\">{$message}</p>";
+    }
 ?>
 <form class="form" id="login-form" action="login.php" method="POST">
     <h2><img src="images/art.png" alt=""></h2>
-    <?php
-        if (!empty($message)) {
-            echo "<p class=\"mt-4\">{$message}</p>";
-        }
-    ?>
     <label for="username">Username</label>
     <br><br>
     <input type="username" name="username" id="username">
@@ -63,6 +63,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <input class="button" type="submit" id="login-submit" value="Login"><span><p>or register <a href="register.php">here</a></p></span> 
 </form>
 
-<script src="js/script.js"></script>
-
 <?php require 'include/footer.inc.php'; ?>
+<script src="js/script.js"></script>

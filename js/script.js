@@ -53,8 +53,8 @@ $('.remove-preview').on('click', function () {
     reset(dropzone);
 });
 
-function closeAlert(){
-    document.getElementById("alert").style.display="none";
+function closeAlert() {
+    document.getElementById("alert").style.display = "none";
 }
 
 window.setTimeout(closeAlert, 3000);
@@ -109,38 +109,7 @@ fetch('helper/is_logged_in.php')
         }
     })
 
-    const form = document.querySelector('form')
-    const username = document.querySelector('#username')
-    form.addEventListener('submit', (e) => {
-        let firstFieldFocus = undefined
-        // submitBtn.setAttribute('disabled', true)
 
-        if (username.value.trim() == '') {
-            firstFieldFocus = username
 
-        } 
 
-        // if (last.value.trim() == '') {
-        //     error_last.classList.add('error')
-        //     if(firstFieldFocus == undefined){
-        //         firstFieldFocus = last
-        //     }
-        //     e.preventDefault
-        // } else {
-        //     error_last.classList.remove('error')
-        // }
 
-        // if (!ack.checked) {
-        //     error_ack.classList.add('error')
-        //     if(firstFieldFocus == undefined){
-        //         firstFieldFocus = ack
-        //     }
-        //     e.preventDefault
-        // } else {
-        //     error_ack.classList.remove('error')
-        // }
-
-        // firstFieldFocus != undefined ? firstFieldFocus.focus() : result.innerHTML = '<p>Thanks buddy for the info</p>'
-        // submitBtn.removeAttribute('disabled')
-
-    })

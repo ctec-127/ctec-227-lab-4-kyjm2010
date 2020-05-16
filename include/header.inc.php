@@ -18,9 +18,9 @@
             <img src="images/logo.png" alt="">
         </div>
         <div class="faux-nav">
-            <a href=""><span>Find Friends</span</a>
-            <a href=""><span>Account Settings</span></a>
-            <a href=""><span>Support</span></a>
+            <a class="search" href=""><span>Find Friends</span</a>
+            <a class="settings" href=""><span>Account Settings</span></a>
+            <a class="support" href=""><span>Support</span></a>
         </div>
         <div class="log">
             <a href="register.php" id="register">Register</a>

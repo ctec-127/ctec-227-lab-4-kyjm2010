@@ -17,7 +17,6 @@ require_once 'include/functions.inc.php';
                         <div class="form-group">
                             <div class="preview-zone hidden">
                                 <div class="box box-solid">
-                                    <!-- <h2><img src="images/art.png" alt=""></h2> -->
                                     <div class="box-header with-border">
                                     <div><b>Images Previewed Here</b></div>
                                 </div>
